@@ -95,8 +95,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void handleResponse(BackendlessUser response) {
                             Log.i(TAG,"Registration successful for "+ response.getEmail() );
-                            Intent intent = new Intent(LoginActivity.this, TripListActivity.class);
-                            startActivity(intent);
+                            pDialog.dismiss();
                         }
 
                         @Override
